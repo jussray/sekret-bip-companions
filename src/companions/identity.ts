@@ -7,7 +7,7 @@
 
 // ── Canonical IDs ──────────────────────────────────────────────────────────────
 
-export const NAMED_COMPANION_IDS = ['suhana', 'sy', 'cloud', 'night'] as const;
+export const NAMED_COMPANION_IDS = ['suhana', 'sy', 'night', 'cloud'] as const;
 
 export type NamedCompanionId = (typeof NAMED_COMPANION_IDS)[number];
 

@@ -14,7 +14,7 @@ import {
 const assetPath = <C extends TeenCompanion>(
   companion: C,
   pose: TeenCompanionPose<C>,
-): string => `assets/images/companions/teen/${companion}/${pose}.png`;
+): string => `assets/images/companions/${companion}/${pose}.png`;
 
 const buildEntries = <C extends TeenCompanion>(
   companion: C,
@@ -29,9 +29,10 @@ const buildEntries = <C extends TeenCompanion>(
 
 export const TEEN_COMPANION_MANIFEST = {
   // Batch 0 — Identity Lock: neutral references are live (sourced from Canva canon).
-  raylene: buildEntries('raylene', { neutral: 'production' }),
-  rylane:  buildEntries('rylane',  { neutral: 'production' }),
-  night:   buildEntries('night',   { neutral: 'production' }),
+  suhana: buildEntries('suhana', { neutral: 'production' }),
+  sy:     buildEntries('sy',     { neutral: 'production' }),
+  night:  buildEntries('night',  { neutral: 'production' }),
+  cloud:  buildEntries('cloud',  { neutral: 'production' }),
 } as const;
 
 export const getTeenCompanionAssetStatus = <C extends TeenCompanion>(

@@ -8,11 +8,12 @@ import { TEEN_COMPANION_POSES, type TeenCompanion, type TeenCompanionPose } from
 
 export const PIPELINE_VERSION = '2.0';
 
-/** Human-readable display names for the locked teen companions. */
+/** Human-readable display names for the companions. */
 export const COMPANION_DISPLAY_NAMES: Record<TeenCompanion, string> = {
-  raylene: 'Suhana',
-  rylane:  'Sy',
-  night:   'Night',
+  suhana: 'Suhana',
+  sy:     'Sy',
+  night:  'Night',
+  cloud:  'Cloud',
 };
 
 /** Short intent text per pose for image generation prompts. */
@@ -44,7 +45,7 @@ export interface CompanionBatch {
 }
 
 const sharedPose = (pose: string): CompanionBatchMember[] =>
-  (['raylene', 'rylane', 'night'] as const).map((companion) => ({ companion, pose }));
+  (['suhana', 'sy', 'night', 'cloud'] as const).map((companion) => ({ companion, pose }));
 
 export const COMPANION_BATCHES: CompanionBatch[] = [
   { id: 0, name: 'Identity Lock',          complete: true,  members: sharedPose('neutral') },
@@ -57,14 +58,16 @@ export const COMPANION_BATCHES: CompanionBatch[] = [
     name: 'Signature Character Poses',
     complete: false,
     members: [
-      { companion: 'raylene', pose: 'encouraging' },
-      { companion: 'raylene', pose: 'sleepy' },
-      { companion: 'rylane',  pose: 'encouraging' },
-      { companion: 'rylane',  pose: 'calm' },
-      { companion: 'night',   pose: 'headphones' },
-      { companion: 'night',   pose: 'comfort' },
-      { companion: 'night',   pose: 'window' },
-      { companion: 'night',   pose: 'rain' },
+      { companion: 'suhana', pose: 'encouraging' },
+      { companion: 'suhana', pose: 'sleepy' },
+      { companion: 'sy',     pose: 'encouraging' },
+      { companion: 'sy',     pose: 'calm' },
+      { companion: 'night',  pose: 'headphones' },
+      { companion: 'night',  pose: 'comfort' },
+      { companion: 'night',  pose: 'window' },
+      { companion: 'night',  pose: 'rain' },
+      { companion: 'cloud',  pose: 'comfort' },
+      { companion: 'cloud',  pose: 'grounding' },
     ],
   },
 ];

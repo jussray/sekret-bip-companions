@@ -3,7 +3,7 @@
  * Extracted from jussray/Sekret-Bip · src/config/companionCurriculum.ts
  */
 
-export type CompanionId = 'suhana' | 'sy' | 'cloud' | 'night';
+export type CompanionId = 'suhana' | 'sy' | 'night' | 'cloud';
 
 export type CompanionMode =
   | 'comfort'
