@@ -7,15 +7,16 @@
 
 // ── Canonical IDs ──────────────────────────────────────────────────────────────
 
-export const NAMED_COMPANION_IDS = ['suhana', 'sy', 'night', 'cloud'] as const;
+export const NAMED_COMPANION_IDS = ['suhana', 'sy', 'night', 'cloud', 'ja'] as const;
 
 export type NamedCompanionId = (typeof NAMED_COMPANION_IDS)[number];
 
 export const COMPANION_DISPLAY_NAMES: Record<NamedCompanionId, string> = {
   suhana: 'Suhana',
   sy:     'Sy',
-  cloud:  'Cloud',
   night:  'Night',
+  cloud:  'Cloud',
+  ja:     'Ja',
 };
 
 export function isNamedCompanionId(value: unknown): value is NamedCompanionId {
@@ -24,13 +25,15 @@ export function isNamedCompanionId(value: unknown): value is NamedCompanionId {
 
 // ── Legacy migration ───────────────────────────────────────────────────────────
 
-export type LegacyPersistedCompanionId = 'soft' | 'raylene' | 'rylane' | 'cloud' | 'night';
-export type LegacyWriteCompanionId = Exclude<LegacyPersistedCompanionId, 'soft'>;
+export type LegacyPersistedCompanionId = 'soft' | 'raylene' | 'rylane' | 'cloud' | 'night' | 'sekret' | 'oracle';
+export type LegacyWriteCompanionId = 'raylene' | 'rylane' | 'cloud' | 'night' | 'ja';
 
 const LEGACY_TO_CANONICAL: Readonly<Record<string, NamedCompanionId>> = {
   soft:    'suhana',
   raylene: 'suhana',
   rylane:  'sy',
+  sekret:  'ja',
+  oracle:  'ja',
 };
 
 const CANONICAL_TO_LEGACY: Readonly<Record<NamedCompanionId, LegacyWriteCompanionId>> = {
@@ -38,6 +41,7 @@ const CANONICAL_TO_LEGACY: Readonly<Record<NamedCompanionId, LegacyWriteCompanio
   sy:     'rylane',
   cloud:  'cloud',
   night:  'night',
+  ja:     'ja',
 };
 
 /**

@@ -73,6 +73,16 @@ export const COMPANION_PROFILES: Record<CompanionId, CompanionProfile> = {
     greeting:       COMPANION_CURRICULUM.night.greeting,
     accentColor:    '#c4b5fd',
   },
+  ja: {
+    id:             'ja',
+    name:           'Ja',
+    emoji:          '✨',
+    title:          'The Oracle / Inner Mirror',
+    vibe:           'Reflects your patterns back without making you feel watched. Quiet, steady, deeply perceptive.',
+    firstChatIntro: COMPANION_CURRICULUM.ja.firstChatIntro,
+    greeting:       COMPANION_CURRICULUM.ja.greeting,
+    accentColor:    '#fbbf24',
+  },
 };
 
 const CRISIS_PATTERN = /\b(suicidal|self[- ]?harm|not safe|abuse|danger)\b/i;

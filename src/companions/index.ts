@@ -33,7 +33,7 @@ export type {
   CompanionCurriculum,
 } from './curriculum';
 
-// Display profiles
+// Display profiles (Suhana · Sy · Night · Cloud · Ja)
 export {
   COMPANION_PROFILES,
   isSafetyTrigger,
