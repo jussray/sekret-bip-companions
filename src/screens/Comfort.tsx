@@ -3,12 +3,12 @@ import { useApp } from '../context/AppContext';
 import type { ComfortQuote } from '../types';
 
 const QUOTES: ComfortQuote[] = [
-  { q: "You are not too much. You are not too sensitive. You are human, and you feel things deeply — that's a gift, not a flaw.", src: '💜 Rylane' },
-  { q: "Rest is not a reward. It's a right. You don't have to earn it.", src: '🌙 Cloud' },
-  { q: "The version of you that's struggling right now is still worthy of love — from others, and from yourself.", src: '💜 Rylane' },
-  { q: "You survived every hard day so far. That's a 100% track record.", src: '⚡ Zara' },
-  { q: "It's okay to not be okay. But you don't have to be there alone.", src: '🌿 Sage' },
-  { q: "Small steps still count as movement. Even standing still when the world is spinning — that's strength.", src: '🌊 Nova' },
+  { q: "You are not too much. You are not too sensitive. You are human, and you feel things deeply — that's a gift, not a flaw.", src: '🌸 Suhana' },
+  { q: "Rest is not a reward. It's a right. You don't have to earn it.", src: '☁️ Cloud' },
+  { q: "The version of you that's struggling right now is still worthy of love — from others, and from yourself.", src: '🌸 Suhana' },
+  { q: "You survived every hard day so far. That's a 100% track record.", src: '⚡ Sy' },
+  { q: "It's okay to not be okay. But you don't have to be there alone.", src: '🌙 Night' },
+  { q: "Small steps still count as movement. Even standing still when the world is spinning — that's strength.", src: '☁️ Cloud' },
 ];
 
 const REMINDERS = [

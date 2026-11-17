@@ -4,7 +4,7 @@ const BADGES = [
   { icon: '🌬️', name: 'Breath Master', earned: true },
   { icon: '🫂', name: 'Circle Member', earned: true },
   { icon: '🎙️', name: 'First Voice Bip', earned: true },
-  { icon: '💜', name: '7 Days with Rylane', earned: true },
+  { icon: '💜', name: '7 Days with Suhana', earned: true },
   { icon: '🌙', name: 'Night Owl', earned: false },
   { icon: '⭐', name: '30-Day Streak', earned: false },
 ];
@@ -12,7 +12,7 @@ const BADGES = [
 const HISTORY = [
   { icon: '📓', title: 'Journal entry saved', time: 'Today · 10:42 PM', pts: '+50' },
   { icon: '🌬️', title: 'Breathing session', time: 'Today · 9:15 PM', pts: '+25' },
-  { icon: '💜', title: 'Chat with Rylane', time: 'Today · 8:30 PM', pts: '+30' },
+  { icon: '💜', title: 'Chat with Suhana', time: 'Today · 8:30 PM', pts: '+30' },
   { icon: '🔥', title: '14-day streak bonus', time: 'Yesterday', pts: '+200' },
 ];
 

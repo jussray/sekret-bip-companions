@@ -1,18 +1,11 @@
 import { useApp } from '../context/AppContext';
 import type { ScreenId } from '../types';
-
-const COMPANIONS = [
-  { avatar: '🌙', name: 'Rylane', vibe: 'calm · night' },
-  { avatar: '☁️', name: 'Cloud', vibe: 'dreamy · soft' },
-  { avatar: '⚡', name: 'Zara', vibe: 'bold · hype' },
-  { avatar: '🌿', name: 'Sage', vibe: 'wise · grounded' },
-  { avatar: '🌊', name: 'Nova', vibe: 'chill · deep' },
-];
+import { COMPANIONS } from '../data/companions';
 
 const MOODS = [
   { emoji: '😄', label: 'Amazing', toast: 'Glad you\'re feeling amazing! 🌟' },
   { emoji: '🙂', label: 'Good', toast: 'That\'s great to hear 🙂' },
-  { emoji: '😐', label: 'Meh', toast: 'Meh days happen. Rylane is here 💜' },
+  { emoji: '😐', label: 'Meh', toast: 'Meh days happen. Your companion is here 💜' },
   { emoji: '😢', label: 'Sad', toast: 'Sending you a soft hug 💙' },
   { emoji: '😭', label: 'Rough', toast: 'You\'re not alone in this 💜' },
 ];
@@ -63,7 +56,7 @@ export default function Room() {
               className={`comp-card${selectedComp === i ? ' selected' : ''}`}
               onClick={() => { setSelectedComp(i); setScreen('chat'); }}
             >
-              <div className="comp-avatar-wrap">{c.avatar}</div>
+              <div className="comp-avatar-wrap">{c.emoji}</div>
               <div className="comp-name">{c.name}</div>
               <div className="comp-vibe">{c.vibe}</div>
             </div>
@@ -87,7 +80,7 @@ export default function Room() {
         >
           <div style={{ fontSize: '1.8rem' }}>💜</div>
           <div>
-            <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--purple-light)' }}>Talk to Rylane</div>
+            <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--purple-light)' }}>Talk to {COMPANIONS[selectedComp].name}</div>
             <div style={{ fontSize: '0.7rem', color: 'var(--muted)', marginTop: 2 }}>Your companion is here · tap to chat</div>
           </div>
           <div style={{ marginLeft: 'auto', color: 'var(--purple-light)' }}>›</div>
@@ -101,7 +94,7 @@ export default function Room() {
           <div style={{ fontSize: '1.8rem' }}>🎙️</div>
           <div>
             <div style={{ fontSize: '0.8rem', fontWeight: 700, color: '#5eead4' }}>Voice Bip</div>
-            <div style={{ fontSize: '0.7rem', color: 'var(--muted)', marginTop: 2 }}>Record a voice note with Rylane</div>
+            <div style={{ fontSize: '0.7rem', color: 'var(--muted)', marginTop: 2 }}>Record a voice note with {COMPANIONS[selectedComp].name}</div>
           </div>
           <div style={{ marginLeft: 'auto', color: '#5eead4' }}>›</div>
         </div>

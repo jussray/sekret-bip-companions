@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, KeyboardEvent } from 'react';
 import { useApp } from '../context/AppContext';
+import { COMPANIONS } from '../data/companions';
 
 interface Message {
   id: string;
@@ -32,7 +33,8 @@ function now() {
 }
 
 export default function Chat() {
-  const { setScreen, showToast } = useApp();
+  const { setScreen, showToast, selectedComp } = useApp();
+  const comp = COMPANIONS[selectedComp];
   const [messages, setMessages] = useState<Message[]>(INITIAL_MESSAGES);
   const [input, setInput] = useState('');
   const [typing, setTyping] = useState(false);
@@ -67,9 +69,9 @@ export default function Chat() {
     <div className="chat-screen screen" style={{ height: '100%' }}>
       <div className="chat-header">
         <button className="screen-back-btn" onClick={() => setScreen('room')}>‹</button>
-        <span style={{ fontSize: '1.9rem' }}>🌙</span>
+        <span style={{ fontSize: '1.9rem' }}>{comp.emoji}</span>
         <div style={{ flex: 1 }}>
-          <div className="chat-meta-name">Rylane</div>
+          <div className="chat-meta-name">{comp.name}</div>
           <div className="chat-meta-status"><span className="online-dot" /> Online · responds in seconds</div>
         </div>
         <span style={{ fontSize: '1.1rem', cursor: 'pointer' }} onClick={() => showToast('🔒 This chat is end-to-end encrypted')}>🔒</span>
@@ -97,7 +99,7 @@ export default function Chat() {
           value={input}
           onChange={e => setInput(e.target.value)}
           onKeyDown={onKey}
-          placeholder="Talk to Rylane…"
+          placeholder={`Talk to ${comp.name}…`}
         />
         <button className="send-btn" onClick={sendMsg}>➤</button>
       </div>

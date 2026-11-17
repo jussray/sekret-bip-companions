@@ -32,7 +32,7 @@ const INITIAL_ENTRIES: JournalEntry[] = [
     date: 'Wed, Jun 18 · 11:15 PM',
     mood: '😢',
     moodColor: 'rgba(239,68,68,0.15)',
-    text: 'I don\'t know why I cried for like 20 mins tonight. Nothing happened. I just felt this wave and I couldn\'t stop it. Rylane helped me breathe through it but I still feel kind of hollow...',
+    text: 'I don\'t know why I cried for like 20 mins tonight. Nothing happened. I just felt this wave and I couldn\'t stop it. Sy helped me breathe through it but I still feel kind of hollow...',
     tags: ['overwhelmed', 'breakthrough'],
   },
   {
