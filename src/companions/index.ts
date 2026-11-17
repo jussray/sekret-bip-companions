@@ -44,13 +44,11 @@ export type {
   CompanionProfile,
 } from './profiles';
 
-// Teen companion asset types and manifest
+// Teen companion asset types
 export {
   TEEN_COMPANIONS,
   TEEN_COMPANION_POSES,
-  TEEN_COMPANION_MANIFEST,
-  getTeenCompanionAssetStatus,
-} from './manifest';
+} from './types';
 export type {
   TeenCompanion,
   TeenCompanionPose,
@@ -58,6 +56,12 @@ export type {
   CompanionAssetStatus,
   TeenCompanionAssetEntry,
 } from './types';
+
+// Teen companion asset manifest
+export {
+  TEEN_COMPANION_MANIFEST,
+  getTeenCompanionAssetStatus,
+} from './manifest';
 
 // Production pipeline
 export {

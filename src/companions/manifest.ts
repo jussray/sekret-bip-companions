@@ -20,12 +20,12 @@ const buildEntries = <C extends TeenCompanion>(
   companion: C,
   overrides: Partial<Record<TeenCompanionPose<C>, CompanionAssetStatus>> = {},
 ): TeenCompanionAssetEntry<C>[] =>
-  TEEN_COMPANION_POSES[companion].map((pose) => ({
+  (TEEN_COMPANION_POSES[companion] as readonly TeenCompanionPose<C>[]).map((pose) => ({
     companion,
     pose,
-    status: overrides[pose] ?? 'missing',
+    status: (overrides as Partial<Record<string, CompanionAssetStatus>>)[pose as string] ?? 'missing',
     relativePath: assetPath(companion, pose),
-  }));
+  })) as TeenCompanionAssetEntry<C>[];
 
 export const TEEN_COMPANION_MANIFEST = {
   // Batch 0 — Identity Lock: neutral references are live (sourced from Canva canon).
